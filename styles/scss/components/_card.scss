@@ -7,14 +7,20 @@
     width: 100%;
     max-width: 327px;
     background-color: #fff;
-    transform: translateY(-170px);
+    position: absolute;
+    top: 100px;
     @media (min-width: map.get($breakpoints, "tablet")) {
         padding: 4rem;
         max-width: 600px;
         @media (max-width: map.get($breakpoints, "desktop")) {
-            transform: translateY(-230px);
+            top: 100px;
         }
     }
+}
+
+.accordion:not(:last-child) {
+    border-bottom: 1px solid map.get($colors, "background"); 
+    margin-bottom: $margin;
 }
 
 .logo {
@@ -32,6 +38,7 @@
     img {
         height: 21px;
         width: 21px;
+        user-select: none;
         @media (min-width: map.get($breakpoints, "tablet"))  {
             height: 35px;
             width: 35px;
@@ -40,10 +47,16 @@
 }
 
 .card {
-    .collapsible {
+    .collapsible-heading {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        &:hover {
+            cursor: pointer;
+            summary {
+                color: map.get($colors, "accent");
+            }
+        }
     }
     summary {
         font-size: 1.6rem;
@@ -57,13 +70,21 @@
         font-size: 1.4rem;
         color: map.get($colors, "text");
         font-weight: 400;
-        display: none;
     }
-    .collapsible, p {
+    .collapsible-heading, p {
         margin-bottom: $margin;
     }
+    .collapsible {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s;
+    }
     .expanded {
-        display: block;
+        max-height: 400px;
+        transition: max-height 0.5s ease-in;
+    }
+    img {
+        user-select: none;
     }
 }
 

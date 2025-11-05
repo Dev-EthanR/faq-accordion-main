@@ -31,7 +31,7 @@ ul {
   background-repeat: no-repeat;
   background-size: contain;
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 600px) {
   .header {
     max-width: 100%;
     background-image: url("./../assets/images/background-pattern-desktop.svg");
@@ -48,18 +48,24 @@ ul {
   width: 100%;
   max-width: 327px;
   background-color: #fff;
-  transform: translateY(-170px);
+  position: absolute;
+  top: 100px;
 }
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .container {
     padding: 4rem;
     max-width: 600px;
   }
 }
-@media (min-width: 500px) and (max-width: 1024px) {
+@media (min-width: 600px) and (max-width: 1024px) {
   .container {
-    transform: translateY(-230px);
+    top: 100px;
   }
+}
+
+.accordion:not(:last-child) {
+  border-bottom: 1px solid hsl(275, 100%, 97%);
+  margin-bottom: 2.4rem;
 }
 
 .logo {
@@ -72,7 +78,7 @@ ul {
   font-size: 3.2rem;
   font-weight: 700;
 }
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .logo h1 {
     font-size: 5.6rem;
   }
@@ -80,25 +86,34 @@ ul {
 .logo img {
   height: 21px;
   width: 21px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .logo img {
     height: 35px;
     width: 35px;
   }
 }
 
-.card .collapsible {
+.card .collapsible-heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.card .collapsible-heading:hover {
+  cursor: pointer;
+}
+.card .collapsible-heading:hover summary {
+  color: hsl(281, 83%, 54%);
 }
 .card summary {
   font-size: 1.6rem;
   font-weight: 600;
   max-width: 220px;
 }
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .card summary {
     max-width: 100%;
   }
@@ -107,13 +122,23 @@ ul {
   font-size: 1.4rem;
   color: hsl(292, 16%, 49%);
   font-weight: 400;
-  display: none;
 }
-.card .collapsible, .card p {
+.card .collapsible-heading, .card p {
   margin-bottom: 2.4rem;
 }
+.card .collapsible {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s;
+}
 .card .expanded {
-  display: block;
+  max-height: 400px;
+  transition: max-height 0.5s ease-in;
+}
+.card img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .card summary,
