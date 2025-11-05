@@ -1,1 +1,3 @@
-@import 'scss/_variables';
+@use 'scss/reset';
+@use 'scss/components/header';
+@use 'scss/components/card'

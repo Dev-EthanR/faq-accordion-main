@@ -1,0 +1,73 @@
+@use "sass:map";
+@use '../variables' as *;
+
+
+.container {
+    padding: 2.4rem;
+    width: 100%;
+    max-width: 327px;
+    background-color: #fff;
+    transform: translateY(-170px);
+    @media (min-width: map.get($breakpoints, "tablet")) {
+        padding: 4rem;
+        max-width: 600px;
+        @media (max-width: map.get($breakpoints, "desktop")) {
+            transform: translateY(-230px);
+        }
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: $margin;
+    margin-bottom: $margin;
+    h1 {
+        font-size: 3.2rem;
+        font-weight: 700;
+        @media (min-width: map.get($breakpoints, "tablet"))  {
+            font-size: map.get($font-size, "large");
+        }
+    }
+    img {
+        height: 21px;
+        width: 21px;
+        @media (min-width: map.get($breakpoints, "tablet"))  {
+            height: 35px;
+            width: 35px;
+        }
+    }
+}
+
+.card {
+    .collapsible {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    summary {
+        font-size: 1.6rem;
+        font-weight: 600;
+        max-width: 220px;
+        @media (min-width: map.get($breakpoints, "tablet"))  {
+            max-width: 100%;
+        }
+    }
+    p {
+        font-size: 1.4rem;
+        color: map.get($colors, "text");
+        font-weight: 400;
+        display: none;
+    }
+    .collapsible, p {
+        margin-bottom: $margin;
+    }
+    .expanded {
+        display: block;
+    }
+}
+
+.card summary, 
+.logo, h1 {
+    color: map.get($colors, "primary");
+}

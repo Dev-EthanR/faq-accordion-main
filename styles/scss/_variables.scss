@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 $font-family: "Work Sans", sans-serif;
+$margin: 2.4rem;
 
 $colors: (
     "primary": hsl(292deg, 42%, 14%),
@@ -9,8 +10,15 @@ $colors: (
     "background": hsl(275deg, 100%, 97%)
 );
 
+$font-size: (
+    "large": 5.6rem,
+    "medium": 1.8rem,
+    "small": 1.6rem
+);
+
 $breakpoints: (
     "mobile": 0px,
-    "tablet": 600px,
+    "tablet": 500px,
     "desktop": 1024px
 );
+

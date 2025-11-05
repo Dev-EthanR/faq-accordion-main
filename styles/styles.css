@@ -1,1 +1,122 @@
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");/*# sourceMappingURL=styles.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+*::before, *::after, * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 1.5;
+  background-color: hsl(275, 100%, 97%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Work Sans", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.header {
+  background-image: url("./../assets/images/background-pattern-mobile.svg");
+  height: 500px;
+  max-height: 300px;
+  max-width: 500px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media screen and (min-width: 500px) {
+  .header {
+    max-width: 100%;
+    background-image: url("./../assets/images/background-pattern-desktop.svg");
+  }
+}
+@media screen and (min-width: 1024px) {
+  .header {
+    background-size: cover;
+  }
+}
+
+.container {
+  padding: 2.4rem;
+  width: 100%;
+  max-width: 327px;
+  background-color: #fff;
+  transform: translateY(-170px);
+}
+@media (min-width: 500px) {
+  .container {
+    padding: 4rem;
+    max-width: 600px;
+  }
+}
+@media (min-width: 500px) and (max-width: 1024px) {
+  .container {
+    transform: translateY(-230px);
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+.logo h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+@media (min-width: 500px) {
+  .logo h1 {
+    font-size: 5.6rem;
+  }
+}
+.logo img {
+  height: 21px;
+  width: 21px;
+}
+@media (min-width: 500px) {
+  .logo img {
+    height: 35px;
+    width: 35px;
+  }
+}
+
+.card .collapsible {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card summary {
+  font-size: 1.6rem;
+  font-weight: 600;
+  max-width: 220px;
+}
+@media (min-width: 500px) {
+  .card summary {
+    max-width: 100%;
+  }
+}
+.card p {
+  font-size: 1.4rem;
+  color: hsl(292, 16%, 49%);
+  font-weight: 400;
+  display: none;
+}
+.card .collapsible, .card p {
+  margin-bottom: 2.4rem;
+}
+.card .expanded {
+  display: block;
+}
+
+.card summary,
+.logo, h1 {
+  color: hsl(292, 42%, 14%);
+}/*# sourceMappingURL=styles.css.map */

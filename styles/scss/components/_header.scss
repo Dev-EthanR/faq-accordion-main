@@ -1,0 +1,21 @@
+@use '../variables' as *;
+@use "sass:map";
+.header {
+    background-image: url('./../assets/images/background-pattern-mobile.svg');
+    height: 500px;
+    max-height: 300px;
+    max-width: 500px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @media screen and (min-width: map.get($breakpoints, "tablet")) {
+        max-width: 100%;
+        background-image: url('./../assets/images/background-pattern-desktop.svg');
+    }
+    
+    @media screen and (min-width: map.get($breakpoints, "desktop")) {
+        background-size: cover;
+    }
+}
+
