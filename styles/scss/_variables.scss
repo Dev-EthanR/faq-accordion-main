@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+$font-family: "Work Sans", sans-serif;
+
+$colors: (
+    "primary": hsl(292deg, 42%, 14%),
+    "text": hsl(292deg, 16%, 49%),
+    "accent": hsl(281deg, 83%, 54%),
+    "background": hsl(275deg, 100%, 97%)
+);
+
+$breakpoints: (
+    "mobile": 0px,
+    "tablet": 600px,
+    "desktop": 1024px
+);
