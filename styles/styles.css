@@ -108,6 +108,9 @@ ul {
 .card .collapsible-heading:hover summary {
   color: hsl(281, 83%, 54%);
 }
+.card .collapsible-heading img:focus-visible {
+  outline: 2px solid hsl(281, 83%, 54%);
+}
 .card summary {
   font-size: 1.6rem;
   font-weight: 600;
