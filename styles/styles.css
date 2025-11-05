@@ -45,6 +45,7 @@ ul {
 
 .container {
   border-radius: 16px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
   padding: 2.4rem;
   width: 100%;
   max-width: 327px;
